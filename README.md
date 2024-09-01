@@ -1,6 +1,5 @@
 
 # CamPish
-
 **CamPish** is a Flask-based web application designed to capture images and gather IP-based geolocation data from users. It integrates with ngrok to securely expose your local server to the internet, enabling external access.
 
 ## Table of Contents
@@ -97,6 +96,3 @@ This project is for educational purposes only. It demonstrates basic Flask and P
     <img src="https://img.shields.io/static/v1?message=Telegram&logo=telegram&label=&color=2CA5E0&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="telegram logo"  />
   </a>
 </div>
-
-
-
