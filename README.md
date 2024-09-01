@@ -19,7 +19,6 @@
 - Uses ngrok to expose the local Flask server to the internet.
 - Shortens the ngrok URL for easy sharing.
 - Cross-platform support for Linux, macOS, Windows (Git Bash or Cygwin), and Termux on Android.
-- Displays dynamic ASCII banners using random fonts and colors.
 
 ## Requirements
 
