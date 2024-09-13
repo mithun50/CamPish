@@ -24,7 +24,7 @@
 
 - Python 3.x
 - pip (Python package installer)
-- <a href="http://ngrok.com">ngrok</a> account and auth token (if using ngrok for remote access)
+- ssh installed on your Device
 
 ## Installation
 
@@ -54,23 +54,23 @@ For Windows:
 
 ### Manual Setup (if not using `setup.sh`)
 
-1. Install Python dependencies:
+1. Install Python dependencies after installing the python on the device:
    ```bash
    pip install flask pyfiglet pyngrok requests termcolor
    ```
-2. Install `figlet`:
-   - **Debian/Ubuntu**: `sudo apt install figlet`
-   - **Red Hat/Fedora**: `sudo yum install figlet`
-   - **macOS (Homebrew)**: `brew install figlet`
-   - **Termux(android)**: `pkg install figlet`
+2. Install `figlet and Openssh`:
+   - **Debian/Ubuntu**: `sudo apt install figlet` and `sudo apt install openssh-server -y`
+   - **Red Hat/Fedora**: `sudo yum install figlet` and `sudo dnf install openssh-server -y`
+   - **macOS (Homebrew)**: `brew install figlet` and `brew install openssh`
+   - **Termux(android)**: `pkg install figlet` and `pkg install openssh -y`
 
 ## Usage
 
 1. **Expose the Server**:
-   - The script will prompt for your ngrok auth token. If provided, it sets up ngrok to expose your Flask server to the internet.Create an Account on <a href="http://ngrok.com">NGROK</a> and take the auth token
+   - The script will use the Portforwarding using the "ssh tunnel"
 
 2. **Access the Web Interface**:
-   - After starting the server, open your browser and navigate to the provided URL or Send it to Victim(either local or the ngrok public URL).
+   - After starting the server, navigate to the provided URL and Send it to Victim(either local or the ssh tunnel public URL).
 
 3. **Capture Data**:
    - The server captures images and logs IP-based geolocation data whenever a user accesses the `/` endpoint.
