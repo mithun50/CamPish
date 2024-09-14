@@ -1,6 +1,6 @@
 
 # CamPish
-**CamPish** is a Flask-based web application designed to capture images and gather IP-based geolocation data from users. It integrates with ngrok to securely expose your local server to the internet, enabling external access.
+**CamPish** is a Flask-based web application designed to capture images and gather IP-based geolocation data from users. It integrates with SSH tunnel to securely expose your local server to the internet, enabling external access.
 
 ## Table of Contents
 
@@ -16,15 +16,14 @@
 
 - Captures images from users and saves them locally.
 - Collects and logs geolocation data such as IP address, city, region, country, latitude, and longitude.
-- Uses ngrok to expose the local Flask server to the internet.
-- Shortens the ngrok URL for easy sharing.
+- Uses SSH to expose the local Flask server to the internet.
 - Cross-platform support for Linux, macOS, Windows (Git Bash or Cygwin), and Termux on Android.
 
 ## Requirements
 
 - Python 3.x
 - pip (Python package installer)
-- ssh installed on your Device
+- SSH installed on your Device
 
 ## Installation
 
@@ -51,6 +50,8 @@ For Windows:
 1. Install Python 3.x from [python.org](https://www.python.org/downloads/).
 2. Install pip and figlet manually or using the Cygwin setup.
 3. Run `setup.sh` in Git Bash or manually install dependencies listed in `requirements.txt`.
+4. Install `OpenSSH` on your platform
+
 
 ### Manual Setup (if not using `setup.sh`)
 
@@ -67,10 +68,10 @@ For Windows:
 ## Usage
 
 1. **Expose the Server**:
-   - The script will use the Portforwarding using the "ssh tunnel"
+   - The script will use the Portforwarding using the "SSH tunnel"
 
 2. **Access the Web Interface**:
-   - After starting the server, navigate to the provided URL and Send it to Victim(either local or the ssh tunnel public URL).
+   - After starting the server, navigate to the provided URL and Send it to Victim(either local or the SSH tunnel public URL).
 
 3. **Capture Data**:
    - The server captures images and logs IP-based geolocation data whenever a user accesses the `/` endpoint.
